@@ -1,0 +1,13 @@
+duration			0.2
+looping				yes
+start lifetime		10
+start speed			5
+start size			.5	1.5
+simulation speed	12
+material
+	
+shape
+	cone
+	angle	5
+	
+colour ramp
