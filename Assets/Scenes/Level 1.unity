@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.043311067, g: 0.04445677, b: 0.059203453, a: 1}
+  m_IndirectSpecularColor: {r: 0.043387376, g: 0.044548247, b: 0.05929023, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3205,6 +3205,26 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3740185080641748550, guid: c819362230f0b234a882d8a14d58bf88,
+        type: 3}
+      propertyPath: m_margin.z
+      value: -57.22525
+      objectReference: {fileID: 0}
+    - target: {fileID: 3740185080641748550, guid: c819362230f0b234a882d8a14d58bf88,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3740185080641748550, guid: c819362230f0b234a882d8a14d58bf88,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3740185080641748550, guid: c819362230f0b234a882d8a14d58bf88,
+        type: 3}
+      propertyPath: m_isRightToLeft
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1672073214675841406, guid: c819362230f0b234a882d8a14d58bf88,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3313,26 +3333,6 @@ PrefabInstance:
     - target: {fileID: 1253925520579991365, guid: c819362230f0b234a882d8a14d58bf88,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3740185080641748550, guid: c819362230f0b234a882d8a14d58bf88,
-        type: 3}
-      propertyPath: m_margin.z
-      value: -57.22525
-      objectReference: {fileID: 0}
-    - target: {fileID: 3740185080641748550, guid: c819362230f0b234a882d8a14d58bf88,
-        type: 3}
-      propertyPath: m_firstOverflowCharacterIndex
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3740185080641748550, guid: c819362230f0b234a882d8a14d58bf88,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3740185080641748550, guid: c819362230f0b234a882d8a14d58bf88,
-        type: 3}
-      propertyPath: m_isRightToLeft
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
