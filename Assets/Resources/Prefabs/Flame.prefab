@@ -11,12 +11,10 @@ GameObject:
   - component: {fileID: 6370554493257651070}
   - component: {fileID: 8463439342596769456}
   - component: {fileID: 8482707412334510778}
-  - component: {fileID: 914057824853276622}
   - component: {fileID: 2888927287478476043}
   - component: {fileID: 2001205042484127221}
   - component: {fileID: 7544115849143583101}
   - component: {fileID: -4150294949922568405}
-  - component: {fileID: 9204583664684852751}
   m_Layer: 0
   m_Name: Flame
   m_TagString: FriendlyBullet
@@ -52,6 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   globe: {fileID: 6629848943833715865, guid: b6dd60e3a6f0ba84396e5229337b096f, type: 3}
+  speedRange: 50
   speed: 68
 --- !u!114 &8482707412334510778
 MonoBehaviour:
@@ -65,19 +64,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 102ce435a5e52b745aee6275594d5574, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &914057824853276622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 54597941119778369}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58cf6e763ce0f17488f3fd460272af67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tagToHit: Enemy
+  StdVelocity: {x: 0, y: 0}
+  InheritedVelocity: {x: 0, y: 0}
 --- !u!114 &2888927287478476043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,19 +201,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &9204583664684852751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 54597941119778369}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9f348a59887edb499020088394197f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  randomRange: 50
 --- !u!1 &5408522704149147376
 GameObject:
   m_ObjectHideFlags: 0
@@ -281,6 +256,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -292,6 +269,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -304,6 +282,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &5278050130999329092
 BoxCollider:
   m_ObjectHideFlags: 0

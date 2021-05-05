@@ -1,25 +1,30 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ * PROJECT		: UNITY SPACE GAME
+ * PROGRAMMER	: ANDY SGRO
+ * DATE CREATED	: May 15, 2019
+ * DESCRIPTION	: This class activates a GameObject when its HP goes to zero.
+ */
+
 using UnityEngine;
 
+[RequireComponent(typeof(HP))]
+
+/**
+ * NAME    : ActivateOnDeath
+ * PURPOSE :
+ *	- This class activates an GameObject when its HP goes to zero.
+ */
 public class ActivateOnDeath : MonoBehaviour
 {
-	public GameObject toActivate;
+	[SerializeField] private GameObject toActivate;
 
-	private HP hp;
-
-	// Start is called before the first frame update
-	void Start()
+	/**
+	 * \brief	Gets the HP component.
+	 * \param	void
+	 * \return	void
+	 */
+	private void Start()
     {
-		hp = (HP)GetComponent<HP>();
-	}
-
-    // Update is called once per frame
-    void Update()
-    {
-		if (hp.hp <= 0)
-		{
-			toActivate.SetActive(true);
-		}
+		GetComponent<HP>().AddDeathCallback(() => toActivate.SetActive(true));
 	}
 }

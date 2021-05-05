@@ -1,20 +1,40 @@
-﻿using System.Collections;
+﻿/*
+ * PROJECT		: UNITY SPACE GAME
+ * PROGRAMMER	: ANDY SGRO
+ * DATE CREATED	: May 15, 2019
+ * DESCRIPTION	: 
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/**
+ * NAME    : KeyboardRotator
+ * PURPOSE :
+ *	- Purpose, what it does
+ *	- What it's features are
+ *	- How it relates to other classes
+ */
 public class KeyboardRotator : MonoBehaviour
 {
-	public float speed = 10;
+	[SerializeField] private float speed = 10;
 
 	private float angle = 0;
-	
-	// Start is called before the first frame update
-    private void Start()
-    {
-	}
 
-    // Update is called once per frame
-    private void FixedUpdate()
+
+
+	/**
+	 * \brief	
+	 * 
+	 * \detail
+	 * 
+	 * \param	void
+	 * 
+	 * \return	void
+	 */
+	private void FixedUpdate()
     {
 		float xMove = Input.GetAxisRaw("Horizontal");
 		float yMove = Input.GetAxisRaw("Vertical");
@@ -80,8 +100,6 @@ public class KeyboardRotator : MonoBehaviour
 			default:
 				break;
 		}
-
 		transform.localRotation = Quaternion.Euler(0, angle, 0);
-		
 	}
 }

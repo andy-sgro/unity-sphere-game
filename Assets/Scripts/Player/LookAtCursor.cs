@@ -1,17 +1,35 @@
-﻿using System.Collections;
+﻿/*
+ * PROJECT		: UNITY SPACE GAME
+ * PROGRAMMER	: ANDY SGRO
+ * DATE CREATED	: May 15, 2019
+ * DESCRIPTION	: 
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/**
+ * NAME    : LookAtCursor
+ * PURPOSE :
+ *	- Purpose, what it does
+ *	- What it's features are
+ *	- How it relates to other classes
+ */
 public class LookAtCursor : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+	/**
+	 * \brief	
+	 * 
+	 * \detail
+	 * 
+	 * \param	void
+	 * 
+	 * \return	void
+	 */
+	private void Update()
     {
 		if (Time.timeScale != 0.0f)
 		{

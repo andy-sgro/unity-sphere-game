@@ -1,24 +1,44 @@
-﻿using System.Collections;
+﻿/*
+ * PROJECT		: UNITY SPACE GAME
+ * PROGRAMMER	: ANDY SGRO
+ * DATE CREATED	: May 15, 2019
+ * DESCRIPTION	: 
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/**
+ * NAME    : TimedDeath
+ * PURPOSE :
+ *	- Purpose, what it does
+ *	- What it's features are
+ *	- How it relates to other classes
+ */
 public class TimedDeath : MonoBehaviour
 {
-	public float timeTillDie;
-	
-	// Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	[SerializeField] private float timeTillDie;
 
-    // Update is called once per frame
-    void FixedUpdate()
+
+
+
+	/**
+	 * \brief	
+	 * 
+	 * \detail
+	 * 
+	 * \param	void
+	 * 
+	 * \return	void
+	 */
+	void FixedUpdate()
     {
 		timeTillDie -= Time.fixedDeltaTime;
 		if (timeTillDie <= 0)
 		{
-			Destroy(this.gameObject);
+			Destroy(gameObject);
 		}
 	}
 }

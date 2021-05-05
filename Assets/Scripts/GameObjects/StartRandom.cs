@@ -1,15 +1,40 @@
-﻿using System.Collections;
+﻿/*
+ * PROJECT		: UNITY SPACE GAME
+ * PROGRAMMER	: ANDY SGRO
+ * DATE CREATED	: May 15, 2019
+ * DESCRIPTION	: 
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/**
+ * NAME    : StartRandom
+ * PURPOSE :
+ *	- Purpose, what it does
+ *	- What it's features are
+ *	- How it relates to other classes
+ */
 public class StartRandom : MonoBehaviour
 {
-	private SurfaceTraveller surfaceTraveller;
+	private SphereTraveller surfaceTraveller;
 
-	// Start is called before the first frame update
-	void Start()
+
+
+	/**
+	 * \brief	
+	 * 
+	 * \detail
+	 * 
+	 * \param	void
+	 * 
+	 * \return	void
+	 */
+	private void Start()
 	{
-		surfaceTraveller = GetComponent<SurfaceTraveller>();
+		surfaceTraveller = GetComponent<SphereTraveller>();
 
 
 		float halfCir = (surfaceTraveller.Radius * Mathf.PI * Mathf.PI * 2) / Time.fixedDeltaTime;

@@ -1,20 +1,54 @@
-﻿
-
+﻿/*
+ * PROJECT		: UNITY SPACE GAME
+ * PROGRAMMER	: ANDY SGRO
+ * DATE CREATED	: May 15, 2019
+ * DESCRIPTION	: 
+ */
 
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(SphereTraveller))]
+
+
+/**
+ * NAME    : PlayerController
+ * PURPOSE :
+ *	- Purpose, what it does
+ *	- What it's features are
+ *	- How it relates to other classes
+ */
 public class PlayerController : MonoBehaviour
 {
-	private SurfaceTraveller st;
+	private SphereTraveller st = null;
 
+
+	/**
+	 * \brief	
+	 * 
+	 * \detail
+	 * 
+	 * \param	void
+	 * 
+	 * \return	void
+	 */
 	private void Start()
 	{
-		st = GetComponent<SurfaceTraveller>();
+		st = GetComponent<SphereTraveller>();
 	}
 
-	void FixedUpdate()
+
+	/**
+	 * \brief	
+	 * 
+	 * \detail
+	 * 
+	 * \param	void
+	 * 
+	 * \return	void
+	 */
+	private void FixedUpdate()
 	{
 		// get keyboard input
 		float xMove = Input.GetAxis("Horizontal") * st.speed;

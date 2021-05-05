@@ -1,30 +1,36 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ * PROJECT		: UNITY SPACE GAME
+ * PROGRAMMER	: ANDY SGRO
+ * DATE CREATED	: May 15, 2019
+ * DESCRIPTION	: Increments a point when the parent GameObject dies.
+ */
+
 using UnityEngine;
 
+[RequireComponent(typeof(HP))]
+
+
+/**
+ * NAME    : IncrementPointOnDeath
+ * PURPOSE :
+ *	- Increments a point when the parent GameObject dies.
+ *	- This class connects to the EnemyCounter and HP classes.
+ */
 public class IncrementPointOnDeath : MonoBehaviour
 {
-	public GameObject pointKeeper;
+	[SerializeField] private EnemyCounter enemiesLeft = null;
 
-	private HP hp;
-	private Points points;
-	private bool gavePoints = false;
-	
-	// Start is called before the first frame update
-    void Start()
+	/**
+	 * \brief	
+	 * 
+	 * \detail
+	 * 
+	 * \param	void
+	 * 
+	 * \return	void
+	 */
+	private void Start()
     {
-		hp = (HP)GetComponent<HP>();
-		points = (Points)pointKeeper.GetComponent<Points>();
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-		if ((hp.hp <= 0) & (!gavePoints))
-		{
-			gavePoints = true;
-			Points.PointsToWin -= 1;
-		}
+		GetComponent<HP>().AddDeathCallback(() => enemiesLeft.Decrement());
     }
 }

@@ -1,20 +1,32 @@
-﻿using System.Collections;
+﻿/*
+ * PROJECT		: UNITY SPACE GAME
+ * PROGRAMMER	: ANDY SGRO
+ * DATE CREATED	: May 15, 2019
+ * DESCRIPTION	: Gives spherical objects a radius.
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/**
+ * NAME    : Radius
+ * PURPOSE :
+ *	- Gives spherical objects a radius.
+ *	- Useful for globes that SurfaceTravellers travel on.
+ */
 public class Radius : MonoBehaviour
 {
-	public float radius;
-	
-	// Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	[SerializeField] private float radius;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+	/**
+	 * \brief	Gets the private radius field.
+	 * \return	Returns the private radius field.
+	 */
+	public float GetRadius()
+	{
+		return radius;
+	}
 }

@@ -1,20 +1,39 @@
-﻿using System.Collections;
+﻿/*
+ * PROJECT		: UNITY SPACE GAME
+ * PROGRAMMER	: ANDY SGRO
+ * DATE CREATED	: May 15, 2019
+ * DESCRIPTION	: 
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/**
+ * NAME    : OrbitCamera
+ * PURPOSE :
+ *	- Purpose, what it does
+ *	- What it's features are
+ *	- How it relates to other classes
+ */
 public class OrbitCamera : MonoBehaviour
 {
-	public Transform lookAt;
-	public Transform follow;
-	public float distance;
+	[SerializeField] private Transform lookAt;
+	[SerializeField] private Transform follow;
+	[SerializeField] private float distance;
 
-	private void Start()
-	{
 
-	}
-
-    // Update is called once per frame
-    private void LateUpdate()
+	/**
+	 * \brief	
+	 * 
+	 * \detail
+	 * 
+	 * \param	void
+	 * 
+	 * \return	void
+	 */
+	private void LateUpdate()
     {
 		if (follow != null)
 		{

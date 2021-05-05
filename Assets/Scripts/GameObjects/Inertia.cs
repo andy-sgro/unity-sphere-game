@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Inertia : MonoBehaviour
 {
-	private SurfaceTraveller st;
+	private SphereTraveller st;
 
 	private Vector2 inheritedVelocity;
 	private Vector2 stdVelocity;
@@ -18,7 +18,7 @@ public class Inertia : MonoBehaviour
 
 	private void Start()
     {
-		st = (SurfaceTraveller)GetComponent<SurfaceTraveller>();
+		st = (SphereTraveller)GetComponent<SphereTraveller>();
 	}
 
 
