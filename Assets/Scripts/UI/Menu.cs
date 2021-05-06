@@ -2,31 +2,25 @@
  * PROJECT		: UNITY SPACE GAME
  * PROGRAMMER	: ANDY SGRO
  * DATE CREATED	: May 15, 2019
- * DESCRIPTION	: 
+ * DESCRIPTION	: Provides functionality to the Menu buttons,
+ *				  such as loading a new level and quitting the applicaiton.
  */
 
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
 /**
- * NAME    : mainmenu
+ * NAME    : Menu
  * PURPOSE :
- *	- Purpose, what it does
- *	- What it's features are
- *	- How it relates to other classes
+ *	- Provides functionality to the Menu buttons.
+ *	- Allows for loading a new level and quitting the applicaiton.
  */
 public class Menu : MonoBehaviour
 {
 	/**
-	 * \brief	
-	 * 
-	 * \detail
-	 * 
+	 * \brief	Loads the first level.
 	 * \param	void
-	 * 
 	 * \return	void
 	 */
 	public void LoadGame()
@@ -36,12 +30,8 @@ public class Menu : MonoBehaviour
 
 
 	/**
-	 * \brief	
-	 * 
-	 * \detail
-	 * 
+	 * \brief	Loads the main menu.
 	 * \param	void
-	 * 
 	 * \return	void
 	 */
 	public void LoadMenu()
@@ -51,12 +41,8 @@ public class Menu : MonoBehaviour
 
 
 	/**
-	 * \brief	
-	 * 
-	 * \detail
-	 * 
+	 * \brief	Quits the application.
 	 * \param	void
-	 * 
 	 * \return	void
 	 */
 	public void QuitGame()

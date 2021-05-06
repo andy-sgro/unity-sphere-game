@@ -2,31 +2,23 @@
  * PROJECT		: UNITY SPACE GAME
  * PROGRAMMER	: ANDY SGRO
  * DATE CREATED	: May 15, 2019
- * DESCRIPTION	: 
+ * DESCRIPTION	: Makes the GameObject face the mouse cursor.
  */
 
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 
 /**
  * NAME    : LookAtCursor
  * PURPOSE :
- *	- Purpose, what it does
- *	- What it's features are
- *	- How it relates to other classes
+ *	- Makes the GameObject face the mouse cursor.
  */
 public class LookAtCursor : MonoBehaviour
 {
 
 	/**
-	 * \brief	
-	 * 
-	 * \detail
-	 * 
+	 * \brief	Makes the GameObject face the mouse cursor.
 	 * \param	void
-	 * 
 	 * \return	void
 	 */
 	private void Update()

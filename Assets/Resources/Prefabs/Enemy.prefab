@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 8718114483181060439}
   - component: {fileID: 2788371986693755693}
   - component: {fileID: 4213840441197584828}
-  - component: {fileID: 5462031023283716364}
   - component: {fileID: 6962622022634332596}
   - component: {fileID: 2703624612881794487}
   m_Layer: 0
@@ -122,20 +121,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68a35fa878368034a89a2360dd5db255, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 3
---- !u!114 &5462031023283716364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3551692836478008024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79605d022d099b44a9a03579bb2eaffd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tagToHit: FriendlyBullet
+  _hp: 1
+  loseHpOnHit: []
 --- !u!114 &6962622022634332596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,6 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69fe7a93b2347934da1c3915fee17d08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemiesLeft: {fileID: 0}
 --- !u!1001 &3316422281604306101
 PrefabInstance:
   m_ObjectHideFlags: 0

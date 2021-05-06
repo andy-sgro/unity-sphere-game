@@ -2,36 +2,26 @@
  * PROJECT		: UNITY SPACE GAME
  * PROGRAMMER	: ANDY SGRO
  * DATE CREATED	: May 15, 2019
- * DESCRIPTION	: 
+ * DESCRIPTION	: Allows the player to rotate the PlayerController.
  */
 
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 
 /**
  * NAME    : KeyboardRotator
  * PURPOSE :
- *	- Purpose, what it does
- *	- What it's features are
- *	- How it relates to other classes
+ *	- Allows the player to rotate the PlayerController.
  */
 public class KeyboardRotator : MonoBehaviour
 {
 	[SerializeField] private float speed = 10;
-
 	private float angle = 0;
 
 
-
 	/**
-	 * \brief	
-	 * 
-	 * \detail
-	 * 
+	 * \brief	Allows the player to rotate the PlayerController.
 	 * \param	void
-	 * 
 	 * \return	void
 	 */
 	private void FixedUpdate()

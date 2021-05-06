@@ -2,11 +2,9 @@
  * PROJECT		: UNITY SPACE GAME
  * PROGRAMMER	: ANDY SGRO
  * DATE CREATED	: May 15, 2019
- * DESCRIPTION	: 
+ * DESCRIPTION	: Sways the camera a little bit when the player moves.
  */
 
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -30,14 +28,9 @@ public class CameraSway : MonoBehaviour
 	private float tolerance = 0.1f;
 
 
-
 	/**
-	 * \brief	
-	 * 
-	 * \detail
-	 * 
+	 * \brief	Initilizes the xRange and yRange variables.
 	 * \param	void
-	 * 
 	 * \return	void
 	 */
 	private void Start()
@@ -47,14 +40,9 @@ public class CameraSway : MonoBehaviour
 	}
 
 
-
 	/**
-	 * \brief	
-	 * 
-	 * \detail
-	 * 
+	 * \brief	Sways the camera a little bit when the player moves.
 	 * \param	void
-	 * 
 	 * \return	void
 	 */
 	private void LateUpdate()

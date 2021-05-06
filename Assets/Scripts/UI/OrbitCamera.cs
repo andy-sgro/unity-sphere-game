@@ -2,20 +2,16 @@
  * PROJECT		: UNITY SPACE GAME
  * PROGRAMMER	: ANDY SGRO
  * DATE CREATED	: May 15, 2019
- * DESCRIPTION	: 
+ * DESCRIPTION	: This camera script centers itself on the PlayerController on a sphere.
  */
 
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 
 /**
  * NAME    : OrbitCamera
  * PURPOSE :
- *	- Purpose, what it does
- *	- What it's features are
- *	- How it relates to other classes
+ *	- This camera script centers itself on the PlayerController on a sphere.
  */
 public class OrbitCamera : MonoBehaviour
 {
@@ -25,12 +21,8 @@ public class OrbitCamera : MonoBehaviour
 
 
 	/**
-	 * \brief	
-	 * 
-	 * \detail
-	 * 
+	 * \brief	This function centers the camera on the PlayerController which is on the globe.
 	 * \param	void
-	 * 
 	 * \return	void
 	 */
 	private void LateUpdate()

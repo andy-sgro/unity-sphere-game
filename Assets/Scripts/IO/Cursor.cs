@@ -2,67 +2,35 @@
  * PROJECT		: UNITY SPACE GAME
  * PROGRAMMER	: ANDY SGRO
  * DATE CREATED	: May 15, 2019
- * DESCRIPTION	: 
+ * DESCRIPTION	: An abstraction layer for accessing the mouse cursor's position.
  */
 
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 /**
  * NAME    : Cursor
  * PURPOSE :
- *	- Purpose, what it does
- *	- What it's features are
- *	- How it relates to other classes
+ *	- An abstraction layer for accessing the mouse cursor's position.
  */
 public static class Cursor
 {
 
 	/**
-	 * \brief	
-	 * 
-	 * \detail
-	 * 
-	 * \param
-	 * 
-	 * \return
+	 * \brief	Returns the screen coordinates of the cursor.
+	 * \return	"
 	 */
-	public static float X
+	public static Vector2 Position
 	{
 		get
 		{
-			return Camera.main.ScreenToWorldPoint(Input.mousePosition).x;
+			return Camera.main.ScreenToWorldPoint(Input.mousePosition);
 		}
 	}
 
 
 	/**
-	 * \brief	
-	 * 
-	 * \detail
-	 * 
-	 * \param
-	 * 
-	 * \return
-	 */
-	public static float Y
-	{
-		get
-		{
-			return Camera.main.ScreenToWorldPoint(Input.mousePosition).y;
-		}
-	}
-
-
-	/**
-	 * \brief	
-	 * 
-	 * \detail
-	 * 
-	 * \param
-	 * 
-	 * \return
+	 * \brief	Returns the angle of the cursor from the center of the screen.
+	 * \return	"
 	 */
 	public static float Angle
 	{

@@ -2,20 +2,16 @@
  * PROJECT		: UNITY SPACE GAME
  * PROGRAMMER	: ANDY SGRO
  * DATE CREATED	: May 15, 2019
- * DESCRIPTION	: 
+ * DESCRIPTION	: Allows the pause menu to pause and resume the game.
  */
 
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 
 /**
  * NAME    : PauseMenu
  * PURPOSE :
- *	- Purpose, what it does
- *	- What it's features are
- *	- How it relates to other classes
+ *	- Allows the pause menu to pause and resume the game.
  */
 public class PauseMenu : MonoBehaviour
 {
@@ -24,12 +20,8 @@ public class PauseMenu : MonoBehaviour
 
 
 	/**
-	 * \brief	
-	 * 
-	 * \detail
-	 * 
+	 * \brief	Initilizes the pause menu's variables.
 	 * \param	void
-	 * 
 	 * \return	void
 	 */
 	private void Awake()
@@ -41,12 +33,8 @@ public class PauseMenu : MonoBehaviour
 
 
 	/**
-	 * \brief	
-	 * 
-	 * \detail
-	 * 
+	 * \brief	Toggles the pause functionality when the ESCPAPE key is pressed.
 	 * \param	void
-	 * 
 	 * \return	void
 	 */
 	private void Update()
@@ -66,12 +54,8 @@ public class PauseMenu : MonoBehaviour
 
 
 	/**
-	 * \brief	
-	 * 
-	 * \detail
-	 * 
+	 * \brief	Unpauses the game.
 	 * \param	void
-	 * 
 	 * \return	void
 	 */
 	public void Resume()
@@ -83,12 +67,8 @@ public class PauseMenu : MonoBehaviour
 
 
 	/**
-	 * \brief	
-	 * 
-	 * \detail
-	 * 
+	 * \brief	Pauses the game.
 	 * \param	void
-	 * 
 	 * \return	void
 	 */
 	public void Pause()

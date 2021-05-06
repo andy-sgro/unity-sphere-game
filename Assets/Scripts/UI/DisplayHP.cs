@@ -2,8 +2,9 @@
  * PROJECT		: UNITY SPACE GAME
  * PROGRAMMER	: ANDY SGRO
  * DATE CREATED	: May 15, 2019
- * DESCRIPTION	: 
+ * DESCRIPTION	: Displays the player's HP on the HUD overlay.
  */
+
 using UnityEngine;
 using TMPro;
 
@@ -13,9 +14,8 @@ using TMPro;
 /**
  * NAME    : DisplayHP
  * PURPOSE :
- *	- Purpose, what it does
- *	- What it's features are
- *	- How it relates to other classes
+ *	- Displays the player's HP on the HUD overlay.
+ *	- This class connects to the HP class.
  */
 public class DisplayHP : MonoBehaviour
 {
@@ -23,12 +23,9 @@ public class DisplayHP : MonoBehaviour
 
 
 	/**
-	 * \brief	
-	 * 
-	 * \detail
-	 * 
+	 * \brief	Initilizes the HP textbox on the HUD overlay, and sets up a callback function so that
+	 *			the HP textbox gets updated every time the player's HP gets decremented.
 	 * \param	void
-	 * 
 	 * \return	void
 	 */
 	private void Start()

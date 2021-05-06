@@ -2,11 +2,9 @@
  * PROJECT		: UNITY SPACE GAME
  * PROGRAMMER	: ANDY SGRO
  * DATE CREATED	: May 15, 2019
- * DESCRIPTION	: 
+ * DESCRIPTION	: Volume slider script.
  */
 
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,9 +12,7 @@ using UnityEngine.UI;
 /**
  * NAME    : VolumeSlider
  * PURPOSE :
- *	- Purpose, what it does
- *	- What it's features are
- *	- How it relates to other classes
+ *	- Volume slider script.
  */
 public class VolumeSlider : MonoBehaviour
 {
@@ -24,12 +20,8 @@ public class VolumeSlider : MonoBehaviour
 
 
 	/**
-	 * \brief	
-	 * 
-	 * \detail
-	 * 
+	 * \brief	Establishes the max value for the volume.
 	 * \param	void
-	 * 
 	 * \return	void
 	 */
 	private void Start()
@@ -41,15 +33,11 @@ public class VolumeSlider : MonoBehaviour
 
 
 	/**
-	 * \brief	
-	 * 
-	 * \detail
-	 * 
-	 * \param
-	 * 
+	 * \brief	Adjusts the volume based on the position of the slider.
+	 * \param	void
 	 * \return	void
 	 */
-	public void AdjustVolume(float volume)
+	public void AdjustVolume()
 	{
 		Global.music.volume = slider.value;
 	}

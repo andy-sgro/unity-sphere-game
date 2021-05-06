@@ -2,11 +2,9 @@
  * PROJECT		: UNITY SPACE GAME
  * PROGRAMMER	: ANDY SGRO
  * DATE CREATED	: May 15, 2019
- * DESCRIPTION	: 
+ * DESCRIPTION	: This class allows the player to control to main spaceship.
  */
 
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(SphereTraveller))]
@@ -15,9 +13,7 @@ using UnityEngine;
 /**
  * NAME    : PlayerController
  * PURPOSE :
- *	- Purpose, what it does
- *	- What it's features are
- *	- How it relates to other classes
+ *	- This class allows the player to control to main spaceship.
  */
 public class PlayerController : MonoBehaviour
 {
@@ -25,12 +21,8 @@ public class PlayerController : MonoBehaviour
 
 
 	/**
-	 * \brief	
-	 * 
-	 * \detail
-	 * 
+	 * \brief	Gets the SphereTraveller component.
 	 * \param	void
-	 * 
 	 * \return	void
 	 */
 	private void Start()
@@ -40,12 +32,8 @@ public class PlayerController : MonoBehaviour
 
 
 	/**
-	 * \brief	
-	 * 
-	 * \detail
-	 * 
+	 * \brief	Allows the player to control to main spaceship.
 	 * \param	void
-	 * 
 	 * \return	void
 	 */
 	private void FixedUpdate()
@@ -53,8 +41,6 @@ public class PlayerController : MonoBehaviour
 		// get keyboard input
 		float xMove = Input.GetAxis("Horizontal") * st.speed;
 		float yMove = Input.GetAxis("Vertical") * st.speed;
-
 		st.Translate(xMove, yMove);
 	}
-
 }

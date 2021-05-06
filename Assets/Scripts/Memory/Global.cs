@@ -2,20 +2,18 @@
  * PROJECT		: UNITY SPACE GAME
  * PROGRAMMER	: ANDY SGRO
  * DATE CREATED	: May 15, 2019
- * DESCRIPTION	: 
+ * DESCRIPTION	: Contains global variables.
+ *				  Useful for variables that persist through all scenes, like audio volume.
  */
 
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 
 /**
  * NAME    : Global
  * PURPOSE :
- *	- Purpose, what it does
- *	- What it's features are
- *	- How it relates to other classes
+ *	- Contains global variables.
+ *	- Useful for variables that persist through all scenes, like audio volume.
  */
 public static class Global
 {

@@ -2,38 +2,28 @@
  * PROJECT		: UNITY SPACE GAME
  * PROGRAMMER	: ANDY SGRO
  * DATE CREATED	: May 15, 2019
- * DESCRIPTION	: 
+ * DESCRIPTION	: Destroys the GameObject after a specified number of seconds.
  */
 
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 
 /**
  * NAME    : TimedDeath
  * PURPOSE :
- *	- Purpose, what it does
- *	- What it's features are
- *	- How it relates to other classes
+ *	- Destroys the GameObject after a specified number of seconds.
  */
 public class TimedDeath : MonoBehaviour
 {
 	[SerializeField] private float timeTillDie;
 
 
-
-
 	/**
-	 * \brief	
-	 * 
-	 * \detail
-	 * 
+	 * \brief	Destroys the GameObject after a specified number of seconds.
 	 * \param	void
-	 * 
 	 * \return	void
 	 */
-	void FixedUpdate()
+	private void FixedUpdate()
     {
 		timeTillDie -= Time.fixedDeltaTime;
 		if (timeTillDie <= 0)

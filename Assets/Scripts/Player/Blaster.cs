@@ -1,29 +1,49 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ * PROJECT		: UNITY SPACE GAME
+ * PROGRAMMER	: ANDY SGRO
+ * DATE CREATED	: May 15, 2019
+ * DESCRIPTION	: Allows the player to shoot phaser beams.
+ */
+
 using UnityEngine;
 
+
+/**
+ * NAME    : Blaster
+ * PURPOSE :
+ *	- Allows the player to shoot phaser beams.
+ */
 public class Blaster : MonoBehaviour
 {
-	public GameObject bulletPrefab;
-	private float fireInterval = 0.015f;
-	public float angleSpread = 5;
+	[SerializeField] private GameObject bulletPrefab;
+	[SerializeField] private float angleSpread = 5;
 
+	private float fireInterval = 0.015f;
 	private float spread;
-	private List<GameObject> bullets = new List<GameObject>();
 	private SphereTraveller st;
 	private Transform turretTransform;
 
+
+	/**
+	 * \brief	Initilizes the fields.
+	 * \param	void
+	 * \return	void
+	 */
 	private void Start()
 	{
 		spread = angleSpread / 2;
-		st = (SphereTraveller)GetComponent<SphereTraveller>();
+		st = GetComponent<SphereTraveller>();
 		turretTransform = transform.GetChild(1).gameObject.transform;
 	}
 
 
+	/**
+	 * \brief	Fires bullets when the mouse button is pressed.
+	 * \param	void
+	 * \return	void
+	 */
 	private void Update()
 	{
-		// Fire bullet code
 		if (Input.GetMouseButtonDown(0))
 		{
 			InvokeRepeating("Fire", float.Epsilon, fireInterval);
@@ -36,6 +56,11 @@ public class Blaster : MonoBehaviour
 	}
 
 
+	/**
+	 * \brief	Fires bullets.
+	 * \param	void
+	 * \return	void
+	 */
 	void Fire()
 	{
 		if (Time.timeScale != 0.0f)
@@ -45,18 +70,18 @@ public class Blaster : MonoBehaviour
 			bullet.transform.position = transform.position;
 			bullet.transform.rotation = transform.rotation;
 			bullet.GetComponentInParent<SphereTraveller>().Rotation = st.Rotation;
+			Inertia inertia = bullet.GetComponentInParent<Inertia>();
 
 			// get standard velocity
 			float stdSpeed = bullet.GetComponentInParent<SphereTraveller>().speed;
 			float stdAngle = turretTransform.localRotation.eulerAngles.y;
-			Vector2 stdVelocity = TrigPhysics.GetVelocity(stdAngle + Random.Range(-spread, spread), stdSpeed);
-			bullet.GetComponentInParent<Inertia>().StdVelocity = stdVelocity;
+			inertia.StdVelocity = TrigPhysics.GetVelocity(stdAngle + Random.Range(-spread, spread), stdSpeed);
 
 			// get inherited velocity
-			bullet.GetComponentInParent<Inertia>().InheritedVelocity = st.LastDirection;
+			inertia.InheritedVelocity = st.LastDirection;
 
 			// get angle
-			bullet.GetComponentInParent<Inertia>().Angle = stdAngle;
+			inertia.Angle = stdAngle;
 		}
 	}
 }

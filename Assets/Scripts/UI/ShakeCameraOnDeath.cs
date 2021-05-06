@@ -2,7 +2,7 @@
  * PROJECT		: UNITY SPACE GAME
  * PROGRAMMER	: ANDY SGRO
  * DATE CREATED	: May 15, 2019
- * DESCRIPTION	: 
+ * DESCRIPTION	: Jolts the camera a bit when the player dies.
  */
 
 using UnityEngine;
@@ -13,9 +13,7 @@ using UnityEngine;
 /**
  * NAME    : ShakeCameraOnDeath
  * PURPOSE :
- *	- Purpose, what it does
- *	- What it's features are
- *	- How it relates to other classes
+ *	- Jolts the camera a bit when the player dies.
  */
 public class ShakeCameraOnDeath : MonoBehaviour
 {
@@ -24,12 +22,9 @@ public class ShakeCameraOnDeath : MonoBehaviour
 	[SerializeField] private float maxShake;
 
 	/**
-	 * \brief	
-	 * 
-	 * \detail
-	 * 
+	 * \brief	Adds a callback function to the HP component, so that
+	 *			the camera shakes when the player's HP reaches zero.
 	 * \param	void
-	 * 
 	 * \return	void
 	 */
 	private void Start()

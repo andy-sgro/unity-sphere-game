@@ -2,20 +2,16 @@
  * PROJECT		: UNITY SPACE GAME
  * PROGRAMMER	: ANDY SGRO
  * DATE CREATED	: May 15, 2019
- * DESCRIPTION	: 
+ * DESCRIPTION	: Makes a transform face towards another transform.
  */
 
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 
 /**
  * NAME    : LookAt
  * PURPOSE :
- *	- Purpose, what it does
- *	- What it's features are
- *	- How it relates to other classes
+ *	- Makes a transform face towards another transform.
  */
 public class LookAt : MonoBehaviour
 {
@@ -23,12 +19,8 @@ public class LookAt : MonoBehaviour
 
 
 	/**
-	 * \brief	
-	 * 
-	 * \detail
-	 * 
+	 * \brief	Makes a transform face towards another transform.
 	 * \param	void
-	 * 
 	 * \return	void
 	 */
 	private void FixedUpdate()
